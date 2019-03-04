@@ -4,7 +4,7 @@
 *
 * MODULENAME.: timer.h
 *
-* PROJECT....: EMP
+* PROJECT....: Ass1
 *
 * DESCRIPTION: This module handles the systick timer interrupt and defines the behavior when this gets called.
 *

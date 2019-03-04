@@ -2,11 +2,11 @@
 * University of Southern Denmark
 * Embedded Programming (EMP)
 *
-* MODULENAME.: emp.c
+* MODULENAME.: sw1.h
 *
-* PROJECT....: EMP
+* PROJECT....: Ass1
 *
-* DESCRIPTION: See module specification file (.h-file).
+* DESCRIPTION: This module handles sw1 by allowing setup and read if sw1 is pushed.
 *
 * Change Log:
 *****************************************************************************
