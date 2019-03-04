@@ -1,7 +1,26 @@
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded Programming (EMP)
+*
+* MODULENAME.: timer.c
+*
+* PROJECT....: EMP
+*
+* DESCRIPTION: See module specification file (.h-file).
+*
+* Change Log:
+*****************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 190302  KA    Module created.
+*
+*****************************************************************************/
+
+/***************************** Include files *******************************/
 #include <stdint.h>
 #include <inc/tm4c123gh6pm.h>
-
-
+/*****************************    Defines    *******************************/
 #define SYSTICK_RELOAD_VALUE 16000 // ~1 mili second
 
 // Missing definitions in tm4c123gh6pm.h file
@@ -9,19 +28,40 @@
 #define NVIC_INT_CTRL_UNPEND_SYST 0x02000000  // Unpend a systick int
 
 #define SYSTICK_PRIORITY    0x7E
+/*****************************   Constants   *******************************/
 
+/*****************************   Variables   *******************************/
 volatile uint32_t counter=0;
+
+
+/*****************************   Functions   *******************************/
+
 void timer_handler()
+/*****************************************************************************
+*   Input    : Nothing
+*   Output   : Nothing
+*   Function : The interrupt handler for systick, which increments a counter.
+******************************************************************************/
 {
 	counter++;
 }
 
 uint32_t timer_get()
+/*****************************************************************************
+*   Input    : Nothing
+*   Output   : Outputs the absolute time.
+*   Function : This function returns the absolute time.
+******************************************************************************/
 {
 	return counter;
 }
 
-void timer_setup() 
+void timer_setup()
+/*****************************************************************************
+*   Input    : Nothing
+*   Output   : Nothing
+*   Function : To setup the necessary pins and values for the systick timer. The period being 1ms.
+******************************************************************************/
 {
   // Disable systick timer
   NVIC_ST_CTRL_R &= ~(NVIC_ST_CTRL_ENABLE);
@@ -48,4 +88,4 @@ void timer_setup()
   // Enable and start timer
   NVIC_ST_CTRL_R |= NVIC_ST_CTRL_ENABLE;
 }
-
+/****************************** End Of Module *******************************/
