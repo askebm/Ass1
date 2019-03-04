@@ -4,7 +4,7 @@
 *
 * MODULENAME.: timer.c
 *
-* PROJECT....: EMP
+* PROJECT....: Ass1
 *
 * DESCRIPTION: See module specification file (.h-file).
 *
