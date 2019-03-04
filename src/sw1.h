@@ -37,7 +37,7 @@ void sw1_setup();
 bool sw1_read();
 /*****************************************************************************
 *   Input    : Nothing
-*   Output   : Nothing
+*   Output   : State of switch
 *   Function : To figure out rather or not the switch is on or off.
 ******************************************************************************/
 

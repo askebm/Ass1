@@ -76,6 +76,7 @@
   \pgfuseimage{titlepagelogo}
 %  \hspace{1cm}\pgfuseimage{titlepagelogo2}
 }
+\lstset{language=C,basicstyle=\footnotesize,tabsize=2, breaklines=true, numbers=left}
 
 \begin{document}
 % the titlepage
@@ -98,30 +99,72 @@
 \subsection{RGB}%
 \label{sub:rgb}
 
-\begin{frame}[t]{RGB}{rgb.h}
-	lstinputlisting{../src/rgb.h}
+\begin{frame}[t]{RGB}{Defines}
+	\lstinputlisting[firstline=25, lastline=33]{../src/rgb.h}
 \end{frame}
+
+\begin{frame}[t]{RGB}{Function interfaces}
+	\lstinputlisting[firstline=39, lastline=52]{../src/rgb.h}
+\end{frame}
+
+\begin{frame}[t]{RGB}{rgb\_set\_color}
+	\lstinputlisting[firstline=32, lastline=41]{../src/rgb.c}
+\end{frame}
+
 
 \subsection{Switch 1}%
 \label{sub:switch_1}
 
+\begin{frame}[t]{Switch 1}{Function interfaces}
+	\lstinputlisting[firstline=31, lastline=41]{../src/sw1.h}
+\end{frame}
+
+
 \subsection{System Timer}%
 \label{sub:system_timer}
 
+\begin{frame}[t]{System Timer}{Function interfaces}
+	\only<1>{
+	\lstinputlisting[firstline=30, lastline=43]{../src/timer.h}
+	}
+	\only<2>{
+	\lstinputlisting[firstline=44, lastline=50]{../src/timer.h}
+	}
+\end{frame}
 
 
 \section{Main}%
 \label{sec:main}
 
+\subsection{Helper function}%
+\label{sub:helper_function}
+
+
+\begin{frame}[t]{Main}{Helper function}
+	\lstinputlisting[firstline=55, lastline=74]{../src/main.c}
+\end{frame}
+
 \subsection{Debounce}%
 \label{sub:debounce}
+\begin{frame}[t]{Main}{debounce}
+	\lstinputlisting[firstline=99, lastline=107]{../src/main.c}
+\end{frame}
 
 \subsection{States}%
 \label{sub:states}
 
 
-\begin{frame}[t]{debounce}
-	
+\begin{frame}[t]{States}{Valid click}
+	\only<1>{
+	\lstinputlisting[firstline=109, lastline=124]{../src/main.c}
+	}
+	\only<2>{
+	\lstinputlisting[firstline=125, lastline=138]{../src/main.c}
+	}
+\end{frame}
+
+\begin{frame}[t]{States}{Auto}
+	\lstinputlisting[firstline=139, lastline=142]{../src/main.c}
 \end{frame}
 
 
