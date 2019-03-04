@@ -1,0 +1,119 @@
+\documentclass[aspectratio=169,10pt,t]{beamer}
+% \usetheme[
+% %%% options passed to the outer theme
+% %    progressstyle=fixedCircCnt,   %either fixedCircCnt, movCircCnt, or corner
+% %    rotationcw,          % change the rotation direction from counter-clockwise to clockwise
+% %    shownavsym          % show the navigation symbols
+%   ]{SDUsimple}
+\usepackage{SDUtheme/beamerthemeSDUsimple}
+% If you want to change the colors of the various elements in the theme, edit and uncomment the following lines
+% Change the bar and sidebar colors:
+%\setbeamercolor{SDUsimple}{fg=red!20,bg=red}
+%\setbeamercolor{sidebar}{bg=red!20}
+% Change the color of the structural elements:
+%\setbeamercolor{structure}{fg=red}
+% Change the frame title text color:
+%\setbeamercolor{frametitle}{fg=blue}
+% Change the normal text color background:
+%\setbeamercolor{normal text}{fg=black,bg=gray!10}
+% ... and you can of course change a lot more - see the beamer user manual.
+\usepackage{color}
+\usepackage{float}
+\usepackage{dsfont}                         % Enables double stroke fonts
+\usepackage{bm}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+\usepackage{helvet}
+\usefonttheme{professionalfonts}
+
+\newtheorem{algorithm}{Algorithm}
+%\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+% colored hyperlinks
+\newcommand{\chref}[2]{%
+  \href{#1}{{\usebeamercolor[bg]{SDUsimple}#2}}%
+}
+
+\title{Title}
+\subtitle{Subtitle}
+%\date{\today}
+\date{ }
+
+\author{
+  \textbf{Author}
+}
+
+% - Give the names in the same order as they appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation. See the beamer manual for an example
+
+\institute[
+%  {\includegraphics[scale=0.2]{SDU_segl}}\\ %insert a company, department or university logo
+  SDU Robotics\\
+  The Maersk Mc-Kinney Moller Institute\\
+  University of Southern Denmark
+] % optional - is placed in the bottom of the sidebar on every slide
+{% is placed on the bottom of the title page
+  SDU Robotics\\
+  The Maersk Mc-Kinney Moller Institute\\
+  University of Southern Denmark
+
+  %there must be an empty line above this line - otherwise some unwanted space is added between the university and the country (I do not know why;( )
+}
+
+% specify a logo on the titlepage (you can specify additional logos an include them in
+% institute command below
+\pgfdeclareimage[height=0.5cm]{titlepagelogo}{SDUgraphics/SDU_logo_new} % placed on the title page
+%\pgfdeclareimage[height=1.5cm]{titlepagelogo2}{SDUgraphics/SDU_logo_new} % placed on the title page
+\titlegraphic{% is placed on the bottom of the title page
+  \pgfuseimage{titlepagelogo}
+%  \hspace{1cm}\pgfuseimage{titlepagelogo2}
+}
+
+\begin{document}
+% the titlepage
+{\SDUwavesbg%
+\begin{frame}[plain,noframenumbering] % the plain option removes the header from the title page
+  \titlepage
+\end{frame}}
+%%%%%%%%%%%%%%%%
+
+% TOC
+\begin{frame}{Agenda}{\vphantom{(y}}
+\tableofcontents
+\end{frame}
+%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+
+\subsection{Course Overview}
+\begin{frame}{Introduction}{Curriculum for Reguleringsteknik (REG)\vphantom{(y}}
+\vspace{-0.7em}
+{\footnotesize Matematiske og grafiske metoder til syntese af {\color{red}lineære tidsinvariante systemer}:\footnote{{\tiny Based on https://fagbesk.sam.sdu.dk/?fag\_id=39673}}
+\begin{itemize}
+\item {\color{red}diskret og kontinuert tilstandsbeskrivelse}
+\item analyse i tid og frekvens
+\item stabilitet, reguleringshastighed, følsomhed og fejl
+\item digitale PI, PID, LEAD og LAG regulatorer (serieregulatorer)
+\item tilstandsregulering, pole-placement og tilstands-estimering (observer)
+\item optimal regulering (least squares) og optimal tilstands-estimation (Kalman-filter)
+\end{itemize}
+\vspace{0.5em}
+\textbf{Færdigheder}:\\
+Efter gennemførelse af kurset kan den succesfulde studerende:
+\begin{itemize}
+\item kunne analysere, dimensionere og implementere såvel kontinuert som tidsdiskret regulering af lineære tidsinvariante og stokastiske systemer
+\end{itemize}
+\vspace{0.5em}
+\textbf{Kompetencer}:\\
+Efter gennemførelse af kurset kan den succesfulde studerende:
+\begin{itemize}
+\item anvende og implementere klassiske og moderne reguleringsteknikker for at kunne styre og regulere en robot hurtig og præcist
+\end{itemize}}
+\end{frame}
+\end{document}
