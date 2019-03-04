@@ -1,22 +1,19 @@
-
-
-
 /*****************************************************************************
 * University of Southern Denmark
 * Embedded Programming (EMP)
 *
-* MODULENAME.: emp.h
+* MODULENAME.: rgb.h
 *
-* PROJECT....: EMP
+* PROJECT....: Ass1
 *
-* DESCRIPTION: Test.
+* DESCRIPTION: Control RGB LEDs
 *
 * Change Log:
 ******************************************************************************
 * Date    Id    Change
 * YYMMDD
 * --------------------
-* 050128  KA    Module created.
+* 190302  ALL    Module created.
 *
 *****************************************************************************/
 
@@ -41,18 +38,17 @@
 
 /*************************  Function interfaces ****************************/
 void rgb_setup(void);
-
 /*****************************************************************************
 *   Input    : -
 *   Output   : -
-*   Function : Test function
+*   Function : Setup RGB colors
 ******************************************************************************/
 
 void rgb_set_color(uint32_t);
 /*****************************************************************************
-*   Input    : -
+*   Input    : Color
 *   Output   : -
-*   Function : Test function
+*   Function : Set color of RGB LEDs
 ******************************************************************************/
 
 /****************************** End Of Module *******************************/
