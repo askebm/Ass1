@@ -70,10 +70,10 @@ void color_change()
 		if (color < 0)
 			color = NUM_COLORS - 1;
 	}
-	rgb_set_color( colors[color] );	
+	rgb_set_color( colors[color] );
 }
 
-int main(void) 
+int main(void)
 /*****************************************************************************
 *   Input    :
 *   Output   :
@@ -85,7 +85,7 @@ int main(void)
 
 	rgb_setup();
 	sw1_setup();
-  
+
  	// Setup timer
 	__asm("cpsid i");
 	timer_setup();
@@ -111,7 +111,7 @@ int main(void)
 			has_cleared = FALSE;
 			valid_click = FALSE;
 			btn_time=timer_get();
-			
+
 			do
 			{
 				btn_holdtime = timer_get() - btn_time;
@@ -131,8 +131,8 @@ int main(void)
 			// Single press
 			else
 			{
-				auto_mode = FALSE;
-				btn_prev_time=timer_get();
+				auto_mode       = FALSE;
+				btn_prev_time   = timer_get();
 				color_change();
 			}
 		}
