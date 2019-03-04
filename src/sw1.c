@@ -13,7 +13,7 @@
 * Date    Id    Change
 * YYMMDD
 * --------------------
-* 190302  KA    Module created.
+* 190302  All    Module created.
 *
 *****************************************************************************/
 
@@ -37,7 +37,7 @@ void sw1_setup()
 ******************************************************************************/
 {
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R5;
-	while( (SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5) == 0);
+	while( (SYSCTL_PRGPIO_R & SYSCTL_PRGPIO_R5) == 0 );
 
 	// Set Digital Enable for button
 	GPIO_PORTF_DEN_R |= SW1;
