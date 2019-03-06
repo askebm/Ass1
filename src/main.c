@@ -43,7 +43,7 @@ const uint8_t colors[]        = {RGB_COLOR_NONE,RGB_COLOR_GREEN,RGB_COLOR_BLUE,
 int8_t direction        = 0x1;
 int8_t color            = 0;
 uint8_t btn_cnt         = 0;
-uint32_t btn_time       = timer_get();
+uint32_t btn_time	= 0;      
 uint32_t btn_holdtime;
 uint32_t btn_prev_time  = 0;
 uint8_t auto_mode       = FALSE;
