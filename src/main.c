@@ -110,7 +110,7 @@ int main(void)
 		{
 			has_cleared = FALSE;
 			valid_click = FALSE;
-			btn_time=timer_get();
+			btn_time    = timer_get();
 
 			do
 			{
@@ -126,7 +126,7 @@ int main(void)
 			else if( (timer_get() - btn_prev_time) < THRESHHOLD_DOUBLE_CLICK )
 			{
         // Toggle Direction
-				direction ^= 0x1;
+				direction ^= DIRECTION_M;
 			}
 			// Single press
 			else
@@ -144,3 +144,4 @@ int main(void)
 	return 0;
 }
 /****************************** End Of Module *******************************/
+// vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab

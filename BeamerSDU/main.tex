@@ -76,7 +76,8 @@
   \pgfuseimage{titlepagelogo}
 %  \hspace{1cm}\pgfuseimage{titlepagelogo2}
 }
-\lstset{language=C,basicstyle=\footnotesize,tabsize=2, breaklines=true, numbers=left}
+\lstset{language=C,basicstyle=\footnotesize,tabsize=2, breaklines=true, numbers=left }
+\lstset{morekeywords={uint32\_t, bool}}
 
 \begin{document}
 % the titlepage
@@ -100,15 +101,15 @@
 \label{sub:rgb}
 
 \begin{frame}[t]{RGB}{Defines}
-	\lstinputlisting[firstline=25, lastline=33]{../src/rgb.h}
+	\lstinputlisting[firstnumber=25, firstline=25, lastline=33]{../src/rgb.h}
 \end{frame}
 
 \begin{frame}[t]{RGB}{Function interfaces}
-	\lstinputlisting[firstline=39, lastline=52]{../src/rgb.h}
+	\lstinputlisting[firstnumber=39, firstline=39, lastline=52]{../src/rgb.h}
 \end{frame}
 
 \begin{frame}[t]{RGB}{rgb\_set\_color}
-	\lstinputlisting[firstline=32, lastline=41]{../src/rgb.c}
+	\lstinputlisting[firstnumber=32, firstline=32, lastline=41]{../src/rgb.c}
 \end{frame}
 
 
@@ -116,7 +117,7 @@
 \label{sub:switch_1}
 
 \begin{frame}[t]{Switch 1}{Function interfaces}
-	\lstinputlisting[firstline=31, lastline=41]{../src/sw1.h}
+	\lstinputlisting[firstnumber=31, firstline=31, lastline=41]{../src/sw1.h}
 \end{frame}
 
 
@@ -125,10 +126,10 @@
 
 \begin{frame}[t]{System Timer}{Function interfaces}
 	\only<1>{
-	\lstinputlisting[firstline=30, lastline=43]{../src/timer.h}
+	\lstinputlisting[firstnumber=30, firstline=30, lastline=43]{../src/timer.h}
 	}
 	\only<2>{
-	\lstinputlisting[firstline=44, lastline=50]{../src/timer.h}
+	\lstinputlisting[firstnumber=44, firstline=44, lastline=50]{../src/timer.h}
 	}
 \end{frame}
 
@@ -137,7 +138,7 @@
 \label{sec:main}
 
 \begin{frame}[t]{Main}{Defines}
-	\lstinputlisting[firstline=28, lastline=35]{../src/main.c}
+	\lstinputlisting[firstnumber=28, firstline=28, lastline=35]{../src/main.c}
 \end{frame}
 
 \subsection{Helper function}%
@@ -145,13 +146,13 @@
 
 
 \begin{frame}[t]{Main}{Helper function}
-	\lstinputlisting[firstline=55, lastline=74]{../src/main.c}
+	\lstinputlisting[firstnumber=55, firstline=55, lastline=74]{../src/main.c}
 \end{frame}
 
 \subsection{Debounce}%
 \label{sub:debounce}
 \begin{frame}[t]{Main}{debounce}
-	\lstinputlisting[firstline=99, lastline=107]{../src/main.c}
+	\lstinputlisting[firstnumber=99, firstline=99, lastline=107]{../src/main.c}
 \end{frame}
 
 \subsection{States}%
@@ -160,15 +161,15 @@
 
 \begin{frame}[t]{States}{Valid click}
 	\only<1>{
-	\lstinputlisting[firstline=109, lastline=124]{../src/main.c}
+	\lstinputlisting[firstnumber=109, firstline=109, lastline=124]{../src/main.c}
 	}
 	\only<2>{
-	\lstinputlisting[firstline=125, lastline=138]{../src/main.c}
+	\lstinputlisting[firstnumber=125, firstline=125, lastline=138]{../src/main.c}
 	}
 \end{frame}
 
 \begin{frame}[t]{States}{Auto}
-	\lstinputlisting[firstline=139, lastline=142]{../src/main.c}
+	\lstinputlisting[firstnumber=139, firstline=139, lastline=142]{../src/main.c}
 \end{frame}
 
 
